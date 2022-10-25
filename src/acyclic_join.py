@@ -38,7 +38,7 @@ class table_node:
                 self.hs.append(h)
                 child.hash_acyc_j()
         
-        
+# standard chain join
 class norm_chain_join:
     def __init__(self, tables, keys, join_type):
         self.tables = tables
@@ -51,7 +51,7 @@ class norm_chain_join:
             result = pd.merge(result, self.tables[i], on = self.keys[i-1], how = 'inner')
         return result
     
-    
+
 class m_norm_chain_join:
     def __init__(self, Ms, join_type):
         self.Ms = Ms
