@@ -5,8 +5,8 @@ import math
 # from collections import defaultdict
 from acyclic_join import *
 from wander_size import *
-from tpch_3_chain_5 import *
 
+# online overlap estimation
 def olp_random_walk(j, hs):
     pri_keys = ['NationKey', 'S_SuppKey', 'CustKey', 'OrderKey', 'LineNumber']
     """

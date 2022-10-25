@@ -22,9 +22,6 @@ def fixed_sample(table, fixed, scale):
 def process_tpch(fixed, scale, nation, supplier, customer, orders, lineitem):
 
     # Change rows to random order
-    # nation.sample(frac=1)
-
-    # !!!
     supplier.sample(frac=1)
     customer.sample(frac=1)
     orders.sample(frac=1)
@@ -233,7 +230,7 @@ def main():
     # print("Exact union size:")
     # print(exact_union.shape[0])
 
-     # ----------------------------------- sample from disjoint ----------------------------------- 
+    # ----------------------------------- sample from disjoint ----------------------------------- 
     # exact_S, exact_time = exact_sample_from_disjoint([join_1, join_2, join_3, join_4, join_5], n, [hs_1, hs_2, hs_3, hs_4, hs_5])
     # print(exact_time)
     # exact_S.to_csv(r'./tpch_1_chain_5/exact_sample_1000000.csv')

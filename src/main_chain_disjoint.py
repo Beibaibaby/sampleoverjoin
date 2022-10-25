@@ -5,7 +5,7 @@ from acyclic_join import *
 from build_hash import *
 import pickle
 # from sample_from_disjoint import *
-from sample_disjoint_1 import *
+from sample_from_disjoint import *
 from sample_union_bernoulli import *
 
 def fixed_sample(table, fixed, scale):
@@ -23,9 +23,6 @@ def fixed_sample(table, fixed, scale):
 def process_tpch(fixed, scale, nation, supplier, customer, orders, lineitem):
 
     # Change rows to random order
-    # nation.sample(frac=1)
-
-    # !!!
     supplier.sample(frac=1)
     customer.sample(frac=1)
     orders.sample(frac=1)
@@ -39,7 +36,6 @@ def process_tpch(fixed, scale, nation, supplier, customer, orders, lineitem):
     lineitem_sample = fixed_sample(lineitem, fixed, scale).reset_index(drop=True)
 
     return nation_sample, supplier_sample, customer_sample,orders_sample,lineitem_sample
-    # return lineitem_sample,orders_sample,customer_sample,supplier_sample,nation_sample
 
 
 def sort_by_index(tables):

@@ -15,7 +15,6 @@ def hash_j_uq3(j, pri_keys):
     for i in range(1,n):
         print(i)
         for index, row in j.tables[i].iterrows():
-            # print(index)
             key = row[j.keys[i-1]]
             pri = row[pri_keys[i]]
             hs[i-1][key].append(pri)

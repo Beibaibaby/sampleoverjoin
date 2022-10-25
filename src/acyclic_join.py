@@ -9,10 +9,6 @@ class chain_join:
     def f_join(self):
         result = self.tables[0]
         for i in range(1,len(self.tables)):
-            # print(len(result))
-            # print(result)
-            # print(self.tables[i])
-            # print(self.keys[i-1])
             result = pd.merge(result, self.tables[i], on = self.keys[i-1], how = 'inner')
         return result
 
@@ -37,7 +33,6 @@ class table_node:
             for child in self.childs:
                 h = defaultdict(list)
                 for index, row in child.table.iterrows():
-                    # print(index)
                     key = row[self.key]
                     h[key].append(index)
                 self.hs.append(h)
@@ -53,7 +48,6 @@ class norm_chain_join:
     def f_join(self):
         result = self.tables[0]
         for i in range(1,len(self.tables)):
-            # print(len(result))
             result = pd.merge(result, self.tables[i], on = self.keys[i-1], how = 'inner')
         return result
     

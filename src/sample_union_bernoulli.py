@@ -204,11 +204,6 @@ def exact_olken_sample_union_bernoulli(js, n, hss):
     return S, time_store
 
 
-# def olken_wander_sample_from_disjoint(js, n, hss):
-
-# def exact_wander_sample_from_disjoint(js, n, hss):
-
-
 
 
 

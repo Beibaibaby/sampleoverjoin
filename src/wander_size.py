@@ -8,15 +8,14 @@ import pandas as pd
 import numpy as np
 import pickle
 from equi_chain_overlap import *
-from tpch_3_chain_5 import *
 
 def random_walk(j, hs):
-    pri_keys = ['NationKey', 'S_SuppKey', 'CustKey', 'OrderKey', 'LineNumber']
     """
     :param j: join j
     :param hs: hash table for join keys
     :return: joined tuple and probability
     """ 
+    pri_keys = ['NationKey', 'S_SuppKey', 'CustKey', 'OrderKey', 'LineNumber']
     ts = []
     t = j.tables[0].sample(n=1)
     ts.append(t)

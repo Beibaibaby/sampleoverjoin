@@ -22,8 +22,6 @@ def fixed_sample(table, fixed, scale):
 def process_tpch(fixed, scale, nation, supplier, customer, orders, lineitem):
 
     # Change rows to random order
-    # nation.sample(frac=1)
-
     # should adjust percentage and scale according to table size
     nation_sample = nation
     supplier_sample = fixed_sample(supplier, fixed, scale).reset_index(drop=True)
