@@ -1,5 +1,5 @@
 # sample over join
-Source code for paper ``Sample over Union of Joins''.
+Source code for paper ``Sampling over Union of Joins''.
 
 The main implementation is located in src.
 
